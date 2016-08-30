@@ -57,7 +57,7 @@ Plugin update URI: qrcode
     
     
     function qrcode_generateqr($data, $id = '') {
-        include "lib/qrlib.php";
+        include_once "lib/qrlib.php";
         if($id!='') {
             $filename = $id."_".md5($data)."_".osc_get_preference("code_size", "qrcode").".png";
         } else {
